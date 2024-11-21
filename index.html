@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css">
+    <style>
+        header{
+            background-color: aquamarine;
+            z-index: 2;
+        }
+
+        .carousel-item img{
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .card .card-body{
+            background-color: rgba(0,0,0,0.25);
+        }
+
+        .card-img-overlay {
+            transition: background 0.4s ease; /* Suaviza mudanças no fundo */
+        }
+
+        .card:hover .card-img-overlay {
+            background: rgba(0, 0, 0, 0.6); /* Escurece ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <header class="position-sticky start-0 top-0">
+        <div class="container">
+            <div class="navbar">
+                <h1>Animes da temporada</h1>
+                <div>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#carousel-scroll" class="nav-link active">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#animes-temporada" class="nav-link">Animes Temporada</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="header">
+        <section id="carousel-scroll" class="pt-3">
+            <div class="container">
+                <!-- data-bs-ride="carousel" faz com que ele comece a animação logo após o carregamento da página -->
+                <div id="carousel-animes" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="3000">
+                            <img src="https://cdn.pixabay.com/photo/2022/12/01/04/40/backpacker-7628303_1280.jpg" alt="arte promocional Exterminadores do além">
+                            <div class="carousel-caption">
+                                <h2>Os Exterminadore do Além</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="https://cdn.pixabay.com/photo/2023/12/07/11/11/girl-8435340_1280.png" alt="arte promocional Uma Advogada Brilhante">
+                            <div class="carousel-caption">
+                                <h2> Uma Advogada Brilhante</h2>
+                            </div>
+                        </div>
+                        <div class="carousel-item" data-bs-interval="3000">
+                            <img src="https://cdn.pixabay.com/photo/2024/05/09/08/07/ai-generated-8750166_1280.jpg" alt="arte promocional Superpai">
+                            <div class="carousel-caption">
+                                <h2>Superpai</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Botões de navegação -->
+                    <button class="carousel-control-prev" data-bs-target="#carousel-animes" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" data-bs-target="#carousel-animes" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <!-- Indicadores carousel -->
+                    <div class="carousel-indicators">
+                        <button type="button" class="active" data-bs-target="#carousel-animes" data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#carousel-animes" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-animes" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="animes-temporada">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-lg-4 col-md-6 col-12 mt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2023/12/07/11/11/girl-8435340_1280.png" alt="arte promocional anime da temporada">
+                            <div class="card-body card-img-overlay d-flex align-items-end">
+                                <p class="text-white fw-bold">Exterminadores do além, temporada de inverno 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-12 mt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2023/12/07/11/11/girl-8435340_1280.png" alt="arte promocional anime da temporada">
+                            <div class="card-body card-img-overlay d-flex align-items-end">
+                                <p class="text-white fw-bold">Exterminadores do além, temporada de inverno 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-12 mt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2023/12/07/11/11/girl-8435340_1280.png" alt="arte promocional anime da temporada">
+                            <div class="card-body card-img-overlay d-flex align-items-end">
+                                <p class="text-white fw-bold">Exterminadores do além, temporada de inverno 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-12 mt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2023/12/07/11/11/girl-8435340_1280.png" alt="arte promocional anime da temporada">
+                            <div class="card-body card-img-overlay d-flex align-items-end">
+                                <p class="text-white fw-bold">Exterminadores do além, temporada de inverno 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col col-lg-4 col-md-6 col-12 mt-3">
+                        <div class="card">
+                            <img class="card-img-top" src="https://cdn.pixabay.com/photo/2023/12/07/11/11/girl-8435340_1280.png" alt="arte promocional anime da temporada">
+                            <div class="card-body card-img-overlay d-flex align-items-end">
+                                <p class="text-white fw-bold">Exterminadores do além, temporada de inverno 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./lib/bootstrap.bundle.min.js"></script>
+</body>
+</html>
